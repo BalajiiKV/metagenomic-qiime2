@@ -230,3 +230,11 @@ Beta Diversity -  It tells how much the samples are similar or different.
 Metrics - Bray Curtis(abundance of species), Jaccard Index(presence or absence), Unweighted UniFrac(phylogeny+presence), Weighted UniFrac(phylogeny+abundance)
 
 Visualizations of Beta Diversity - PCoA plot, heatmap, dendrograms
+
+![unweighted](images/unweighted.jpg)
+
+- Jaccard Index, Unweighted Unifrac: how many taxa are shared in between samples(presence/absence).
+
+![weighted](images/weighted.jpg)
+
+- Bray-Curtis Index, Weighted Unifrac : taxa having similar abundance.
