@@ -210,7 +210,16 @@ Key values for consideration of analysis -
 - p-value - It should be below 0.05 to reject the null hypothesis(probablity value)
 - q-value - It is corrected p-value on accounting False Discovery rate so it should be less than 0.05.
 
-These above values gives confidence of the accuracy of the data and visualization.
+These above values gives confidence for the accuracy of data and visualisation.
+
+```
+qiime diversity alpha-rarefaction \
+  --i-table dada2/table.qza \
+  --i-phylogeny phylo/rooted-tree.qza \
+  --p-max-depth  1103 \
+  --m-metadata-file sample-meta/sample-metadata.tsv \
+  --o-visualization alpha-div/alpha-rarefaction.qzv
+```
 
 ![rarefraction](images/alpha-rarefraction.png)
 
