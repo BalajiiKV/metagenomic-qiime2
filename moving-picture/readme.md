@@ -152,7 +152,7 @@ For building a phylogenetic tree (rooted and unrooted tree) and proceeding with 
 
 ```
 qiime phylogeny align-to-tree-mafft-fasttree \
-  --i-sequences qc-ft/dada2/rep-seqs.qza \
+  --i-sequences dada2/rep-seqs.qza \
   --o-alignment phylo/aligned-rep-seqs.qza \
   --o-masked-alignment phylo/masked-aligned-rep-seqs.qza \
   --o-tree phylo/unrooted-tree.qza \
@@ -175,9 +175,9 @@ Sampling depth selection - Selecting the depth such that it retains more sample 
 #for diversity-metrics
 qiime diversity core-metrics-phylogenetic \
   --i-phylogeny phylo/rooted-tree.qza \
-  --i-table qc-ft/dada2/table.qza \
+  --i-table dada2/table.qza \
   --p-sampling-depth 1103 \
-  --m-metadata-file sample_meta/sample-metadata.tsv \
+  --m-metadata-file sample-meta/sample-metadata.tsv \
   --output-dir diversity-metrics
 ```
 Richness and Evenness of the sample is given from the box plot, from alpha diversity visualisation.
@@ -189,11 +189,11 @@ Richness and Evenness of the sample is given from the box plot, from alpha diver
 #for alpha diversity
 qiime diversity alpha-group-significance \
   --i-alpha-diversity diversity-metrics/faith_pd_vector.qza \
-  --m-metadata-file sample_meta/sample-metadata.tsv \
+  --m-metadata-file sample-meta/sample-metadata.tsv \
   --o-visualization alpha-div/faith-pd-group-significance.qzv
 qiime diversity alpha-group-significance \
   --i-alpha-diversity diversity-metrics/evenness_vector.qza \
-  --m-metadata-file sample_meta/sample-metadata.tsv \
+  --m-metadata-file sample-meta/sample-metadata.tsv \
   --o-visualization alpha-div/evenness-group-significance.qzv
 ```
 
@@ -209,6 +209,12 @@ Key values for consideration of analysis -
 - H value - Higher the value then higher the richness/evenness
 - p-value - It should be below 0.05 to reject the null hypothesis(probablity value)
 - q-value - It is corrected p-value on accounting False Discovery rate so it should be less than 0.05.
+
+These above values gives confidence of the accuracy of the data and visualization.
+
+![rarefraction](images/alpha-rarefraction.png)
+
+By changing the options in the toggle we can compare diversity based on - body sites, antibiotic usage, subject or metrics.
 
 Beta Diversity -  It tells how much the samples are similar or different.
 
