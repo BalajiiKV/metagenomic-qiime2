@@ -1,5 +1,19 @@
 # Moving Picture Tutorial from QIIME2
 
+## Repository Structure
+
+moving-picture/
+│── alpha-div/           # Results for alpha diversity analyses 
+│── dada2/               # Outputs from DADA2 (denoising, QC, representative sequences, feature tables, stats)
+│── data/                # Imported raw data (emp-single-end sequences in QIIME2 artifact format)
+│── demul/               # Demultiplexed data + summary visualizations
+│── diversity-metrics/   # Core diversity metrics (alpha + beta diversity outputs)
+│── images/              # Exported plots for visualization (e.g., beta-div PCoA plots, boxplots, etc.)
+│── phylo/               # Phylogenetic tree artifacts (aligned sequences, unrooted tree, rooted tree)
+│── sample-meta/         # Metadata files linked to sample information (used in alpha/beta diversity analysis)
+│── readme.md            # Local readme with workflow explanation
+
+
 ## Installing latest version of QIIME2 Amplicon Distribution
 ```
 conda env create \
@@ -12,6 +26,14 @@ conda env create \
 The subset of the data published from research article Global patterns of 16S rRNA diversity at a depth of millions of sequences per sample (https://www.pnas.org/doi/10.1073/pnas.1000080107).
 
 The hypervariable region 4 (V4) of the 16S rRNA gene was amplified using the F515-R806 primers - a broad-coverage primer pair for Bacteria that also picks up some Archaea. Single-end sequencing was performed on an Illumina HiSeq.
+
+## Workflow
+
+1. Import
+2. Demultiplex
+3. Denoise (DADA2)
+4. Phylogeny
+5. Diversity analyses
 
 ## Downloading the data
 
