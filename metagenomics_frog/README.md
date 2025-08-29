@@ -111,6 +111,9 @@ qiime feature-table filter-features \
 Using a pre-trained classifier to perform taxonomic classification.
 
 ```
+wget https://data.qiime2.org/2021.2/common/gg-13-8-99-515-806-nb-classifier.qza
+
+
 qiime feature-classifier classify-sklearn \
 --i-classifier gg-13-8-99-515-806-nb-classifier.qza \
 --i-reads denoised_data/rep-seqs.qza \
