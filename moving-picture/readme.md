@@ -1,7 +1,7 @@
 # Moving Picture Tutorial from QIIME2
 
 ## Repository Structure
-
+```
 moving-picture/
 │── alpha-div/           # Results for alpha diversity analyses 
 │── dada2/               # Outputs from DADA2 (denoising, QC, representative sequences, feature tables, stats)
@@ -12,7 +12,7 @@ moving-picture/
 │── phylo/               # Phylogenetic tree artifacts (aligned sequences, unrooted tree, rooted tree)
 │── sample-meta/         # Metadata files linked to sample information (used in alpha/beta diversity analysis)
 │── readme.md            # Local readme with workflow explanation
-
+```
 
 ## Installing latest version of QIIME2 Amplicon Distribution
 ```
