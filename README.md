@@ -1,6 +1,8 @@
 # 🧬 beginning-metagenomics
 
-This repo would serve as beginner's path for metagenomics, while myself a beginner trying to figure out the path and constantly pushing resources and pipline materials.
+This repo would serve as beginner's path for metagenomics, while myself a beginner trying to figure out the path and constantly pushing resources and pipline materials. If your'e new to this subject like me start by reading below and move to moving picture followed to other projects.
+
+The contents provided in the repository are not made by generative ai, they are reflection of my understanding towards the subject, down below the content may have been undergone asthetic enhancement using ai without changing any contents provided.
 
 ---
 
